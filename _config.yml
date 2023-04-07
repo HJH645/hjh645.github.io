@@ -1,7 +1,6 @@
 title: Believe in yourself!
-author:
-  name: 黄江红
-  email: 1363756529@qq.com
+name: 黄江红
+email: 1363756529@qq.com
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
@@ -14,7 +13,6 @@ theme: minima
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
 
 # Theme-specific settings
 
