@@ -20,31 +20,39 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="心有所向，无问东西">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hjh">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="数据结构 1一、链表与邻接表用数组模拟链表 123456struct Node &#123;	int val;	Node *next;&#125;;new Node(); &#x2F;&#x2F;非常耗时   单链表：写邻接表（存储图、树） 双链表：优化某些问题  1.1  单链表head -&gt;  head -&gt;  用两个数组，一个用来存当前指针的值是多少（e[]），一个用来存它下一个结点的位置(ne[]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法基础课笔记2">
+<meta property="og:url" content="http://example.com/2024/03/28/acwing2/index.html">
 <meta property="og:site_name" content="hjh">
-<meta property="og:description" content="心有所向，无问东西">
+<meta property="og:description" content="数据结构 1一、链表与邻接表用数组模拟链表 123456struct Node &#123;	int val;	Node *next;&#125;;new Node(); &#x2F;&#x2F;非常耗时   单链表：写邻接表（存储图、树） 双链表：优化某些问题  1.1  单链表head -&gt;  head -&gt;  用两个数组，一个用来存当前指针的值是多少（e[]），一个用来存它下一个结点的位置(ne[]">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/acwing2/image-20240401214429563.png">
+<meta property="og:image" content="http://example.com/acwing2/image-20240401214449319.png">
+<meta property="og:image" content="http://example.com/acwing2/image-20240401214510082.png">
+<meta property="article:published_time" content="2024-03-28T06:07:35.000Z">
+<meta property="article:modified_time" content="2024-04-01T13:49:10.148Z">
 <meta property="article:author" content="Huang Jianghong">
-<meta property="article:tag" content="java，机器学习，算法">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="AcWing">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/acwing2/image-20240401214429563.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2024/03/28/acwing2/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>hjh</title>
+  <title>算法基础课笔记2 | hjh</title>
   
 
 
@@ -153,9 +161,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -171,10 +180,9 @@
       <meta itemprop="name" content="hjh">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/03/28/acwing2/" class="post-title-link" itemprop="url">算法基础课笔记2</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          算法基础课笔记2
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -202,7 +210,14 @@
                 </span>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -227,7 +242,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="数据结构-1"><a href="#数据结构-1" class="headerlink" title="数据结构 1"></a>数据结构 1</h1><h2 id="一、链表与邻接表"><a href="#一、链表与邻接表" class="headerlink" title="一、链表与邻接表"></a>一、链表与邻接表</h2><p>用数组模拟链表</p>
+        <h1 id="数据结构-1"><a href="#数据结构-1" class="headerlink" title="数据结构 1"></a>数据结构 1</h1><h2 id="一、链表与邻接表"><a href="#一、链表与邻接表" class="headerlink" title="一、链表与邻接表"></a>一、链表与邻接表</h2><p>用数组模拟链表</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">	<span class="type">int</span> val;</span><br><span class="line">	Node *next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Node</span>(); <span class="comment">//非常耗时</span></span><br></pre></td></tr></table></figure>
 
 <ol>
@@ -315,172 +330,35 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">10010</span>, M = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">char</span> p[N], s[M];</span><br><span class="line"><span class="type">int</span> ne[N]; <span class="comment">// next[N]容易报错</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; p + <span class="number">1</span> &gt;&gt; m &gt;&gt; s + <span class="number">1</span>; <span class="comment">//下标从1开始</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 求next的过程</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>, j = <span class="number">0</span>; i &lt;= n; i ++) &#123; </span><br><span class="line">        <span class="keyword">while</span> (j &amp;&amp; p[i] != p[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">        <span class="keyword">if</span> (p[i] == p[j + <span class="number">1</span>]) j ++;</span><br><span class="line">        ne[i] = j;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// kmp过程</span></span><br><span class="line">    <span class="comment">// s[i]是当前匹配的，试图和s[i]匹配的是p[j+1]</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt;= m; i ++ ) &#123;</span><br><span class="line">        <span class="comment">// j没有退回起点，并且s[i]和p[j+1]不匹配（j前面的都匹配了）</span></span><br><span class="line">        <span class="comment">// 则将j赋值为ne[j]，即，ne[j]前面的都匹配了，从ne[j]+1开始重新匹配</span></span><br><span class="line">        <span class="keyword">while</span> (j &amp;&amp; s[i] != p[j + <span class="number">1</span>]) j = ne[j]; </span><br><span class="line">        <span class="keyword">if</span> (s[i] == p[j + <span class="number">1</span>]) j ++; <span class="comment">// 匹配成功，j往后移</span></span><br><span class="line">        <span class="keyword">if</span> (j == n) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, i - n);</span><br><span class="line">            j = ne[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+              <a href="/tags/AcWing/" rel="tag"># AcWing</a>
+              <a href="/tags/c/" rel="tag"># c++</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/27/acwing1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Huang Jianghong">
-      <meta itemprop="description" content="心有所向，无问东西">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hjh">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/03/27/acwing1/" class="post-title-link" itemprop="url">算法基础课笔记1</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-03-27 22:31:40" itemprop="dateCreated datePublished" datetime="2024-03-27T22:31:40+08:00">2024-03-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-28 14:08:55" itemprop="dateModified" datetime="2024-03-28T14:08:55+08:00">2024-03-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">算法学习</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>4.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>想在这里分享一些AcWing算法基础课学习时的笔记。第一章一开始没有想到要做笔记，所以笔记很少~</p>
-<h1 id="双指针算法"><a href="#双指针算法" class="headerlink" title="双指针算法"></a>双指针算法</h1><p>所有双指针算法都是O（n）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 0; i &lt; n; i++)&#123;</span><br><span class="line">	for(int j = 0; j &lt; n; j++)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>将暴力算法（n2）优化到O（n)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;i &lt; n; i++) &#123;</span><br><span class="line">	<span class="keyword">while</span>(j &lt; i &amp;&amp; <span class="built_in">check</span>(i, j)) j ++;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//每道题目具体逻辑</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="eg-读入一个字符串，读出里面的单词"><a href="#eg-读入一个字符串，读出里面的单词" class="headerlink" title="eg. 读入一个字符串，读出里面的单词"></a>eg. 读入一个字符串，读出里面的单词</h2><p>“abc def ghi”</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">char</span> str[<span class="number">1000</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">gets</span>(str);</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">strlen</span>(str);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="type">int</span> j = i;</span><br><span class="line">        <span class="keyword">while</span>(j &lt; n &amp;&amp; str[j] != <span class="string">&#x27; &#x27;</span>) j++;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//这道题的具体逻辑</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> k = i; k &lt; j; k++) cout&lt;&lt;str[k];</span><br><span class="line">        </span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">        </span><br><span class="line">        i = j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
 
 
-
-
-
-<h2 id="eg-最长连续不重复子序列"><a href="#eg-最长连续不重复子序列" class="headerlink" title="eg.最长连续不重复子序列"></a>eg.最长连续不重复子序列</h2><p>给定一个长度为n的整数序列，找出最长的不包含重复数字的连续子序列，输出它的长度</p>
-<p>i:从头往后枚举  j：最左能到什么地方   j是一直往右的。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="keyword">while</span>(j &lt;= i &amp;&amp; <span class="built_in">check</span>(i, j)) j++;</span><br><span class="line">    res = <span class="built_in">max</span>(res, i - j + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namesace std;</span><br><span class="line"></span><br><span class="line">int n;</span><br><span class="line">int a[N], s[N]; // s[N]用来确保i j之间没有重复的数字,s[N]表示i,j之间数字的出现次数</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	for(int i = 0; i &lt; n; i ++) cin &gt;&gt; a[i];</span><br><span class="line">	</span><br><span class="line">	int res = 0;</span><br><span class="line">	for(int i = 0, j = 0; i &lt; n; i++) &#123;</span><br><span class="line">		s[a[i]]++;</span><br><span class="line">		while (s[a[i]] &gt; 1) &#123;</span><br><span class="line">			s[a[j]] --;</span><br><span class="line">			j ++;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		res = max(res, i - j + 1);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	cout &lt;&lt; res;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><p>n的二进制表示中第k位是几</p>
-<p>n &#x3D; 15  &#x3D; (1111)2</p>
-<ol>
-<li>先把第k位移到最后一位  n&gt;&gt;k</li>
-<li>看个位是几 x&amp;1</li>
-<li>1+2 &#x3D;&gt;    <strong>n&gt;&gt;k &amp; 1</strong></li>
-</ol>
-<p>lowbit(x) : 返回x的最后一位1    实质：取反x+1</p>
-<p>x &#x3D; 1010   lowbit(x) &#x3D; 10</p>
-<p>x&#x3D; 101000 lowbit(x) &#x3D; 1000</p>
-<h2 id="求x的二进制表示中1的个数"><a href="#求x的二进制表示中1的个数" class="headerlink" title="求x的二进制表示中1的个数"></a>求x的二进制表示中1的个数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">lowbit</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x &amp; -x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">while</span>(n--) &#123;</span><br><span class="line">		<span class="type">int</span> x;</span><br><span class="line">		cin &gt;&gt; x;</span><br><span class="line">		</span><br><span class="line">		<span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(x) x -= <span class="built_in">lowbit</span>(x), res ++;</span><br><span class="line">		</span><br><span class="line">		cout &lt;&lt; res &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><p>整数离散化  保序的离散化</p>
-<p>a[]  1 3 100 2000 500000   -&gt;  0 1 2 3  4</p>
-<ol>
-<li>a[]中可能有重复元素   去重</li>
-<li>如何算出x中的值离散化后的值   二分</li>
-</ol>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; alls; <span class="comment">//存储所有待离散化的值</span></span><br><span class="line"><span class="built_in">sort</span>(alls.<span class="built_in">begin</span>(), alls.<span class="built_in">end</span>());  <span class="comment">//将所有值排序</span></span><br><span class="line">alls.<span class="built_in">erase</span>(<span class="built_in">unique</span>(alls.<span class="built_in">begin</span>(), alls.<span class="built_in">end</span>()), alls.<span class="built_in">end</span>()); <span class="comment">//去掉重复元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//二分求出x对应的离散化的值</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = alls.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l &lt; r) &#123;</span><br><span class="line">        <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(alls[mid] &gt;= x) r = mid;</span><br><span class="line">        <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r + <span class="number">1</span>; <span class="comment">//映射到1,2,...,n</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="区间和"><a href="#区间和" class="headerlink" title="区间和"></a>区间和</h2><img src="/2024/03/27/acwing1/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JldHRsZV9raW5n,size_16,color_FFFFFF,t_70.png" class title="img">
-
-
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">300010</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> a[N], s[N];</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; alls;</span><br><span class="line">vector&lt;PII&gt; add, query; <span class="comment">//用来存储询问</span></span><br><span class="line"><span class="comment">// 找大于等于x的最小的数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = alls.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l &lt; r) &#123;</span><br><span class="line">        <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (alls[mid] &gt;= x) r = mid;</span><br><span class="line">        <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r + <span class="number">1</span>;  <span class="comment">// 前缀和从1开始</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) &#123;</span><br><span class="line">        <span class="type">int</span> x, c;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; c;</span><br><span class="line">        add.<span class="built_in">push_back</span>(&#123;x, c&#125;);</span><br><span class="line">        </span><br><span class="line">        alls.<span class="built_in">push_back</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) &#123;</span><br><span class="line">        <span class="type">int</span> l , r;</span><br><span class="line">        cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">        query.<span class="built_in">push_back</span>(&#123;l, r&#125;);</span><br><span class="line">        </span><br><span class="line">        alls.<span class="built_in">push_back</span>(l);</span><br><span class="line">        alls.<span class="built_in">push_back</span>(r);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//去重</span></span><br><span class="line">    <span class="built_in">sort</span>(alls.<span class="built_in">begin</span>(), alls.<span class="built_in">end</span>());</span><br><span class="line">    alls.<span class="built_in">erase</span>(<span class="built_in">unique</span>(alls.<span class="built_in">begin</span>(), alls.<span class="built_in">end</span>()), alls.<span class="built_in">end</span>());</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 处理插入</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> item : add) &#123;</span><br><span class="line">        <span class="type">int</span> x = <span class="built_in">find</span>(item.first); <span class="comment">// 找到映射后的坐标</span></span><br><span class="line">        a[x] += item.second;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 预处理前缀和</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= alls.<span class="built_in">size</span>(); i ++ ) s[i] = s[i - <span class="number">1</span>] + a[i];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 处理询问</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> item : query) &#123;</span><br><span class="line">        <span class="type">int</span> l = <span class="built_in">find</span>(item.first), r = <span class="built_in">find</span>(item.second);</span><br><span class="line">        cout &lt;&lt; s[r] - s[l - <span class="number">1</span>] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="区间合并"><a href="#区间合并" class="headerlink" title="区间合并"></a>区间合并</h1><p>给出一组区间，将有重叠的区间合并（端点重叠了也要合并）然后输出合并之后的区间个数</p>
-<p>做法：</p>
-<ol>
-<li>按区间左端点排序</li>
-<li>从左到右扫描区间，每次维护一个区间，其他区间与当前区间的关系有：1. 在区间内部（不用管），2. 与区间有交集（将当前维护的区间右端点换成这个区间的右端点），3. 无交集。之后，再将当前区间放入答案，将当前区间设置为下一个区间</li>
-</ol>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">vector&lt;PII&gt; segs;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(vactor&lt;PII&gt; &amp;segs)</span> </span>&#123;</span><br><span class="line">    vector&lt;PII&gt; res;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">sort</span>(segs.<span class="built_in">begin</span>(), segs.<span class="built_in">end</span>()); <span class="comment">//优先以左端点排序</span></span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> st = <span class="number">2e9</span>, ed = <span class="number">-2</span>d9;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> seg : segs) &#123;</span><br><span class="line">        <span class="comment">//已经排序了，所以只要和下一个seg比较，不需要和每个seg比较</span></span><br><span class="line">        <span class="keyword">if</span> (ed &lt; seg.first) &#123;</span><br><span class="line">            <span class="comment">// 没有重叠的情况</span></span><br><span class="line">            <span class="keyword">if</span> (st != <span class="number">-2e9</span>) res.<span class="built_in">push_back</span>(&#123;st, ed&#125;);</span><br><span class="line">            st = seg.first, ed = seg.second;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> ed = <span class="built_in">max</span>(ed, seg.second);  <span class="comment">// 有重叠，更新维护边界的最右边</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (st != <span class="number">2e9</span>) res.<span class="built_in">push_back</span>(st, ed);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) &#123;</span><br><span class="line">        <span class="type">int</span> l, r;</span><br><span class="line">        cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">        segs.<span class="built_in">push_back</span>(&#123;l, r&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">merge</span>(segs);</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; segs.<span class="built_in">size</span>() &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/03/27/acwing1/" rel="prev" title="算法基础课笔记1">
+      <i class="fa fa-chevron-left"></i> 算法基础课笔记1
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -533,6 +411,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1"><span class="nav-number">1.</span> <span class="nav-text">数据结构 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%93%BE%E8%A1%A8%E4%B8%8E%E9%82%BB%E6%8E%A5%E8%A1%A8"><span class="nav-number">1.1.</span> <span class="nav-text">一、链表与邻接表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1  单链表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">单链表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E9%93%BE%E8%A1%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">双链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97"><span class="nav-number">1.2.</span> <span class="nav-text">二、栈与队列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88"><span class="nav-number">1.2.1.</span> <span class="nav-text">栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%9F%E5%88%97"><span class="nav-number">1.2.2.</span> <span class="nav-text">队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%B0%83%E6%A0%88"><span class="nav-number">1.2.3.</span> <span class="nav-text">单调栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97"><span class="nav-number">1.2.4.</span> <span class="nav-text">单调队列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81KMP"><span class="nav-number">1.3.</span> <span class="nav-text">三、KMP</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
